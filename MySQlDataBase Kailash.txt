@@ -1,0 +1,91 @@
+//-------- Shpw all Databases
+1 Show DataBases
+2 Create Database
+
+//---------------create Table---------------------
+3 create table employee(id int not null primary key, address varchar(50),marks int);
+
+//--------- field hum change ni krskty 
+
+4 // Error Show -----insert into student (marks, id , name , address) values (78, 12 "gkgg", "lahore");
+
+5 insert into student (name, id , address , marks) values ("irfan", 1 "upper", "78");
+6 // condition -----------WEHERE------------
+select * from student where id=12;
+
+-------------- primry key duplicate same key not acept-------------
+
+7 // ------------------- update ---------------
+
+update student set address = ""irfan" where id = 1;
+
+8 //------------------- alter new Column add in table ---------------------
+
+  alter table employee add phoneNo int;
+
+9// ---------------------- update id where alter -----------------------
+
+update employee set phoneNo = 12345 where id=1;
+
+10 // --------------------- alter command structure change -----------------
+
+ans = alter tble employee modify column name varchar(60);
+
+11 //----------------------- alter drop tble --------------------
+
+alter table employee drop column phoneNo
+-----------------structure run---------------
+ 
+desc employee 
+
+12 ---------------------- DELTE complete row remove -------------------------
+
+delete from employee where name ="irfan"   
+
+
+13// -----------------------sql function use sum ,avg ,max , min , count--------------------------------
+  1 select sum(marks) from employee
+  2 select avg(marks) from employee
+  3 select max(marks) from employee
+  4 select min(marks) from employee 
+
+
+14 // ------------------------- Order by acending and decending -----------------------
+
+ 1 select * from employee order by id
+ 2 select * from employee order by desc
+
+15 //------------------------- like starting ending %h, _a% , h%_ --------------------------------------
+
+
+select * from employee where name like 'r%';
+
+16 ------------------------------ two table join inner join , left join , right join
+
+16// ---------------inner join as return jo common hoga ------------------
+select * from student inner join employee on student.id= employee.id;
+
+
+17//---------------------------left join all return row ager right waly ky sath matvh na kya to return krdy ga Null
+
+select * from student inner join employee on student.id= employee.id;
+
+18//---------------------------right join all show data row ager left waly ky sath match na kya to return krdy ga Null
+
+select * from student inner join employee on student.id= employee.id;
+
+
+19-------------------------primary key and primary key------------------------
+
+primary key basically unique data
+uniqu null value consider
+
+create TABLE city(
+    id int not null AUTO_INCREMENT,
+    cityname varchar(50) NOT NULL, 
+    PRIMARY KEY (cid)
+    );
+
+----insert data----
+ 
+insert into city(cityname) values('irfan' ), ('frf'), ('etreyuf')
